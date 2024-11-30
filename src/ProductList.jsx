@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ProductList.css'
+import { addItem } from './CartSlice';
 import CartItem from './CartItem';
 function ProductList() {
     const [showCart, setShowCart] = useState(false); 
