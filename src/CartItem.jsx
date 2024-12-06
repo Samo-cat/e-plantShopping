@@ -9,7 +9,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   // Calculate total amount for all products in the cart
   const calculateTotalAmount = () => {
- 
+    
   };
 
   const handleContinueShopping = (e) => {
@@ -21,10 +21,14 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleIncrement = (item) => {
+    dispatch(updateQuantity(item.quantity+1));
   };
 
   const handleDecrement = (item) => {
-   
+    dispatch(updateQuantity(item.quantity-1));
+    if (item.quantity = 0){
+        dispatch(removeItem(item));
+    }
   };
 
   const handleRemove = (item) => {
